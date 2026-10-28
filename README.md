@@ -1,8 +1,8 @@
 # qqbot-mcp
 
-QQ 机器人 MCP 服务器 —— 让 AI 编程助手（Devin / Windsurf 等）通过 QQ 与你保持联系。
+QQ 机器人 MCP 服务器 —— 让 AI 编程助手通过 QQ 与你保持联系。
 
-替代旧的 `cascade-qqbot-bridge` 浏览器注入插件：AI 直接通过 MCP 工具主动推送消息到 QQ，并**阻塞等待你的远程指令**，不再依赖 DOM 注入。
+AI 通过 MCP 工具主动推送消息到 QQ，并**阻塞等待你的远程指令**——离开电脑也能让 AI 继续干活。
 
 ## 核心场景：远程模式
 
@@ -57,7 +57,7 @@ QQ 机器人 MCP 服务器 —— 让 AI 编程助手（Devin / Windsurf 等）�
 
 ## 推荐的用户级 AI 规则
 
-将以下内容加入 AI 助手的用户级规则（如 Devin 的 `~/.config/devin/AGENTS.md`），实现按意图触发的远程模式：
+将以下内容加入 AI 助手的用户级规则/系统提示词，实现按意图触发的远程模式：
 
 ```markdown
 # QQ 机器人通知规则
@@ -82,5 +82,5 @@ QQ 机器人 MCP 服务器 —— 让 AI 编程助手（Devin / Windsurf 等）�
 ## 注意
 
 - 沙箱环境需要用户/群已加入沙箱白名单；主动消息有月度额度限制，被动回复无限制
-- 同一机器人凭证同时只能有一个 gateway 会话正常收消息——请确保旧的 `cascade-qqbot-bridge` 插件已禁用（`cascadeQQBot.enabled: false`）
+- 同一机器人凭证同时只能有一个 gateway 会话正常收消息，请勿多处同时运行
 - MCP 客户端若对长阻塞请求有超时限制，回复不会丢——进 inbox 由 `qq_get_messages` 兜底
