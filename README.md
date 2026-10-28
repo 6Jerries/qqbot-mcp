@@ -12,6 +12,8 @@ QQ 机器人 MCP 服务器 —— 让 AI 编程助手（Devin / Windsurf 等）�
 干活 → QQ 汇报结果 → 阻塞等待你的 QQ 回复 → 按指令继续干活 → …
 ```
 
+![QQ 机器人实际效果](docs/screenshot.jpg)
+
 1. 在 IDE 里告诉 AI「完成后 QQ 通知我」「我去吃饭了」等
 2. AI 完成任务后通过 `qq_notify_and_wait` 推送标题+摘要+候选操作到 QQ
 3. 你在 QQ 回复数字选项或任意指令，AI 立即继续执行
